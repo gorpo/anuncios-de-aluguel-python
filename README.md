@@ -9,7 +9,9 @@ Desenvolver aplicação para anuncios de imoveis para alugar, e com esta aplica�
 
 
 <h2>Requisitos</h2>
-
+Criar interface amigavel ao usuario, onde os anuncios devem ser criados nao atravez da plataforma "admin", mas sim atraves de usuarios cadastrados;<br>
+Realizar a listagem de imoveis cadastrados, e disponibilixar barra de pesquisa por CEP, facilitando encontrar imoveis mais proximos;<br>
+Inserir imagens ao cadastrar os imoveis para facilitar a visualização dos mesmos<br>
 
 
 <h2>Baixando e Rodando Aplicação</h2>
@@ -33,3 +35,5 @@ cd alugue<br>
 python manage.py migrate<br>
 #inciando servidor e aplicacao<br>
 python manage.py runserver<br>
+
+<a href="http://localhost:8000/">localhost:8000</a>
