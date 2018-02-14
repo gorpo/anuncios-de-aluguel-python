@@ -24,7 +24,7 @@ git clone https://github.com/WallesonM/anuncios-de-aluguel-python.git <br>
 cd anuncios-de-aluguel-python<br>
 
 #criando ambiente virtual do python<br>
-python -m venv venv<br>
+python3 -m venv venv<br>
 
 #iniciaindo ambiente virtual<br>
 . venv/bin/activate<br>
@@ -39,9 +39,9 @@ sudo pip install pillow<br>
 cd alugue<br>
 
 #verificando se a tabelas para atualizar no banco<br>
-python manage.py migrate<br>
+python3 manage.py migrate<br>
 
 #inciando servidor e aplicacao<br>
-python manage.py runserver<br>
+python3 manage.py runserver<br>
 
 <a href="http://localhost:8000/">localhost:8000</a>
