@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="POST" action="/buscar/">
+            {% csrf_token %}
+    <label>informe seu cep e encontre uma casa mais proximo de você :</label>
+    <input class="form-control" type="text" name="cep" value="" placeholder="Informe seu CEP">
+    <button class="btn btn-primary" type="submit">Buscar</button>
+</form>
+<br>
+<h4>Imoveis encontrados para este ou proximo a este CEP:</h4>
+<br>
+<ul class="list-group">
+            {% for imoveis in imov %}
+            <li class="list-group-item">
+                <h4>{{imoveis.nome}}</h4>
+                <br>
+                <div class="media">
+                    <img class="mr-3" src="{{imoveis.image.url}}" height="180" width="190">
+                    <br>
+
+                <div class="media-body">
+                {{imoveis.endereco}}
+                <br>
+                {{imoveis.descricao}}
+                <br>
+                Cep: {{imoveis.cep}}
+                <br>
+                <p>
+                    <b>Entre em contato:
+                        <br>
+                    Telefone: {{imoveis.telefone}}
+                        <br>
+                    Email: {{imoveis.email}}</b>
+                </p>
+                <b>Valor: R$ {{imoveis.valor}}</b>
+                <br>
+                Adicionado dia: {{imoveis.created_at}}
+                <br><br>
+
+                </div>
+                </div>
+            </li>
+            {% endfor%}
+        </ul>
+
+{% endblock %}

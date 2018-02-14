@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+    <div>
+        <h4>Informe seus dados para cadastro</h4>
+        <form method="POST" class="form-group">
+           {% csrf_token %}
+            <fildset>
+                {{form.non_field_errors}}
+
+                {% for field in form %}
+                <div class="form">
+                    {{field.label_tag}}
+                    {{field}}
+                    {{field.errors}}
+                </div>
+
+                {% endfor %}
+                  <button type="submit" class="save btn btn-primary">Cadastrar</button>
+                <button type="reset" class="save btn btn-primary">Cancelar</button>
+            </fildset>
+
+        </form>
+    </div>
+
+{% endblock %}

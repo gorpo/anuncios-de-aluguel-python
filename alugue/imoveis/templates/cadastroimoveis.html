@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <h1>Cadastro de Imovel</h1>
+        <form method="POST" class="form-group" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit" class="save btn btn-primary">Salvar</button>
+            <button type="reset" class="save btn btn-primary">Cancelar</button>
+
+
+        </form>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+
+<!doctype html>
+{% load static %}
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Imoveis</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+              {% if user.is_authenticated %}
+              <li class="nav-item">
+              <a class="nav-link " href="/contas/">Painel</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link active" href="/contas/sair/">Sair</a>
+            </li>
+              {% else %}
+            <li class="nav-item">
+              <a class="nav-link active" href="/contas/entrar/">Entre p/ Anúnciar</a>
+            </li>
+              {% endif %}
+
+          </ul>
+        </nav>
+        <h3 class="text-muted">AlugMAIS</h3>
+      </div>
+        <div class="" id="jumbotron">
+
+        <h1>Imoveis para alugar!</h1>
+        <br>
+
+        </div>
+
+    <div class="content">
+        <br>
+        {% block content%}{% endblock %}
+        <br>
+
+    </div>
+</div>
+
+</body>
+</html>
