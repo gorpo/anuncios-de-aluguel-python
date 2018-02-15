@@ -29,7 +29,7 @@ python3 -m venv venv<br>
 #iniciaindo ambiente virtual<br>
 . venv/bin/activate<br>
 
-#baixando libs necessárias
+#baixando libs necessárias<br>
 sudo pip install -r requeriments.txt
 
 #abrindo pasta da aplicação<br>
