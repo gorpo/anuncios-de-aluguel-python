@@ -29,11 +29,8 @@ python3 -m venv venv<br>
 #iniciaindo ambiente virtual<br>
 . venv/bin/activate<br>
 
-#baixando e instalando django<br>
-sudo pip install Django==2.0.2<br>
-
-#baixando e instalando pillow <b>(obs: pillow e uma biblioca extremamente importante para funcionamento da aplicação, para trabalhar com imagens nos forms)</b><br>
-sudo pip install pillow<br>
+#baixando libs necessárias
+sudo pip install -r requeriments.txt
 
 #abrindo pasta da aplicação<br>
 cd alugue<br>
