@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import imoveis
+from .models import Imoveis
 
 # Register your models here.
 
-admin.site.register(imoveis)
+admin.site.register(Imoveis)

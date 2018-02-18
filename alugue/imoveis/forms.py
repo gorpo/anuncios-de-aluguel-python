@@ -1,10 +1,10 @@
 from django import forms
-from .models import imoveis
+from .models import Imoveis
 
 #FORM PARA CADASTRO DE IMOVEL
 class ImoveisForm(forms.ModelForm):
     class Meta:
-        model = imoveis
+        model = Imoveis
         fields = [
 
             'nome',

@@ -1,9 +1,9 @@
-env
+*env/
 .env
 db.*
 .Python
 *.db
 *.sublime*
 data/*
-__pycache__/
+*pycache__/
 .idea/

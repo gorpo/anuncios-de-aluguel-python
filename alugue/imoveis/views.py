@@ -1,18 +1,16 @@
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import imoveis
+from .models import Imoveis
 from .forms import ImoveisForm
 from django.contrib.auth.decorators import login_required
 
 
 # listagem de imoveis
 def home(request):
-    imov = imoveis.objects.all()
-    return render(request, 'imoveis.html', {'imov':imov})
+    listaImoveis = Imoveis.objects.all()
+    return render(request, 'imoveis.html', {'listaImoveis':listaImoveis})
 
-
-# cadastro dos imoveis
 @login_required
 def cadastroImoveis(request):
     form = ImoveisForm()
@@ -27,11 +25,10 @@ def cadastroImoveis(request):
                 '<a href="/">Voltar</a>')
     return render(request, 'cadastroimoveis.html', {'form': form})
 
-# metodo de busca
-def post(request):
+def buscarCep(request):
     buscar = request.POST['cep']
-    imov = imoveis.objects.filter(cep__contains=buscar)
-    return render(request, 'busca.html', {'imov':imov})
+    listaImoveis = Imoveis.objects.filter(cep__contains=buscar)
+    return render(request, 'busca.html', {'listaImoveis':listaImoveis})
 
 
 
