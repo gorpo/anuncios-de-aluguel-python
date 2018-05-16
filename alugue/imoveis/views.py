@@ -9,7 +9,8 @@ from django.contrib.auth.decorators import login_required
 # listagem de imoveis
 def home(request):
     listaImoveis = Imoveis.objects.all()
-    return render(request, 'imoveis.html', {'listaImoveis':listaImoveis})
+    context = {'listaImoveis':listaImoveis}
+    return render(request, 'imoveis.html', context )
 
 @login_required
 def cadastroImoveis(request):
@@ -28,7 +29,8 @@ def cadastroImoveis(request):
 def buscarCep(request):
     buscar = request.POST['cep']
     listaImoveis = Imoveis.objects.filter(cep__contains=buscar)
-    return render(request, 'busca.html', {'listaImoveis':listaImoveis})
+    context =  {'listaImoveis':listaImoveis}
+    return render(request, 'busca.html', context)
 
 
 
