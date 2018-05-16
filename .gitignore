@@ -7,3 +7,12 @@ db.*
 data/*
 *pycache__/
 .idea/
+*.pyc
+*~
+__pycache__
+myvenv
+db_aluguemais.*
+/static
+.DS_Store
+venv
+/venv
