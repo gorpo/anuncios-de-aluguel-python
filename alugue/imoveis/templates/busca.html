@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<form method="POST" action="/buscar/">
+<form  class="" method="POST" action="/buscar/">
             {% csrf_token %}
     <label>informe seu cep e encontre uma casa mais proximo de você :</label>
     <input class="form-control" type="text" name="cep" value="" placeholder="Informe seu CEP">
@@ -42,5 +42,7 @@
             </li>
             {% endfor%}
         </ul>
+        <br>
+    <a class="btn btn-primary" href="/">Voltar</a>    
 
 {% endblock %}

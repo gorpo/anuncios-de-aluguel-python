@@ -6,11 +6,11 @@
            {% csrf_token %}
             <fildset>
                 {{form.non_field_errors}}
-
+                <p><b>a senha deve conter mais que 8 caracteres</b></p>
                 {% for field in form %}
                 <div class="form">
                     {{field.label_tag}}
-                    {{field}}
+                    <p class=input>{{field}}</p>
                     {{field.errors}}
                 </div>
 

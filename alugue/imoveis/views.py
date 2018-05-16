@@ -24,7 +24,8 @@ def cadastroImoveis(request):
                 'Imovel cadasrado com sucesso!'
                 '<br>'
                 '<a href="/">Voltar</a>')
-    return render(request, 'cadastroimoveis.html', {'form': form})
+    context = {'form': form}
+    return render(request, 'cadastroimoveis.html', context)
 
 def buscarCep(request):
     buscar = request.POST['cep']

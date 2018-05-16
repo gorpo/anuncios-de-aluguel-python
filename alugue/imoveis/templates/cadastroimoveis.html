@@ -3,9 +3,29 @@
 {% block content %}
 
     <h1>Cadastro de Imovel</h1>
-        <form method="POST" class="form-group" enctype="multipart/form-data">
+        <form method="POST" class="form-control" enctype="multipart/form-data">
             {% csrf_token %}
-            {{form.as_p}}
+           <label>Titulo:</label>
+           <p class="">{{form.nome}}</p>
+           <label>Endereço:</label>
+           <p class="">{{form.endereco}}</p>
+           <label>Complemento:</label>
+           <p class="">{{form.complemento}}</p>
+           <label>Número:</label>
+           <p class="">{{form.numero}}</p>
+           <label>CEP:</label>
+           <p class="">{{form.cep}}</p>
+             <label>Valor:</label>
+           <p class="">{{form.valor}}</p>
+             <label>Telefone:</label>
+           <p class="">{{form.telefone}}</p>
+             <label>Email:</label>
+           <p class="">{{form.email}}</p>
+             <label>Descrição:</label>
+           <p class="">{{form.descricao}}</p>
+             <label>Foto:</label>
+           <p class="">{{form.image}}</p>
+
             <button type="submit" class="save btn btn-primary">Salvar</button>
             <button type="reset" class="save btn btn-primary">Cancelar</button>
 
