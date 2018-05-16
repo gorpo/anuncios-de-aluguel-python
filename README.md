@@ -36,6 +36,8 @@ sudo pip install -r requeriments.txt
 cd alugue<br>
 
 #verificando se a tabelas para atualizar no banco<br>
+python3 manage.py makemigrations imoveis<br>
+python3 manage.py makemigrations contas<br>
 python3 manage.py migrate<br>
 
 #inciando servidor e aplicacao<br>
